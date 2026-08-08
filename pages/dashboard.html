@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LDCE Library dashboard for students and faculty" />
+    <title>LDCE Library Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-container">
+        <a class="brand" href="../index.html" aria-label="LDCE Library home">
+          <span class="brand-mark">LD</span>
+          <span class="brand-text">LDCE Library</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="../index.html">Home</a></li>
+            <li><a class="nav-link active" href="dashboard.html">Dashboard</a></li>
+            <li><a class="nav-link" href="#books">Books</a></li>
+            <li><a class="nav-link" href="#profile">My Profile</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="dashboard-hero section" id="dashboard">
+        <div class="container dashboard-hero-grid">
+          <div class="dashboard-hero-copy reveal">
+            <p class="eyebrow">Welcome back</p>
+            <h1>Welcome to L.D. College of Engineering Library <span class="hero-icon">📚</span></h1>
+            <p class="hero-lead">
+              Your gateway to knowledge, learning and discovery.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#books">Explore Books →</a>
+              <a class="btn btn-secondary" href="#profile">My Profile</a>
+            </div>
+            <div class="hero-meta">
+              <span class="meta-pill">Digital resources</span>
+              <span class="meta-pill">Study spaces</span>
+              <span class="meta-pill">Library guidance</span>
+            </div>
+          </div>
+
+          <div class="dashboard-hero-card reveal">
+            <div class="hero-banner-shape"></div>
+            <div class="hero-card hero-dashboard-card">
+              <p class="card-label">Library insight</p>
+              <h3>Discover new titles, track activity, and stay ready for study.</h3>
+              <p>
+                The dashboard centralizes library status, recent arrivals, and key updates for students and faculty.
+              </p>
+              <ul class="hero-list">
+                <li>Fast access to the latest arrivals</li>
+                <li>Borrowing insights and availability</li>
+                <li>Campus library schedules and services</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Dashboard analytics</p>
+            <h2>Library performance at a glance</h2>
+          </div>
+
+          <div class="dashboard-stat-grid">
+            <article class="stat-card stat-card-1 reveal">
+              <div class="stat-icon">📚</div>
+              <p class="stat-label">Total Books</p>
+              <h3>12,450</h3>
+              <p class="stat-note">Books in Library</p>
+            </article>
+
+            <article class="stat-card stat-card-2 reveal">
+              <div class="stat-icon">🟢</div>
+              <p class="stat-label">Available Books</p>
+              <h3>9,820</h3>
+              <p class="stat-note">Ready to Borrow</p>
+            </article>
+
+            <article class="stat-card stat-card-3 reveal">
+              <div class="stat-icon">🔄</div>
+              <p class="stat-label">Issued Books</p>
+              <h3>2,630</h3>
+              <p class="stat-note">Currently Borrowed</p>
+            </article>
+
+            <article class="stat-card stat-card-4 reveal">
+              <div class="stat-icon">⚠️</div>
+              <p class="stat-label">Overdue Books</p>
+              <h3>85</h3>
+              <p class="stat-note">Need Attention</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Quick Actions</p>
+            <h2>Speed up your library workflow</h2>
+          </div>
+
+          <div class="dashboard-actions-grid">
+            <article class="action-card reveal">
+              <div class="action-icon">🔍</div>
+              <h3>Search Books</h3>
+              <p>Find your next book</p>
+              <a class="text-link" href="#books">Search Now</a>
+            </article>
+
+            <article class="action-card reveal">
+              <div class="action-icon">📚</div>
+              <h3>Browse Collection</h3>
+              <p>Explore our library collection</p>
+              <a class="text-link" href="#books">Browse Books</a>
+            </article>
+
+            <article class="action-card reveal">
+              <div class="action-icon">🕒</div>
+              <h3>Library Timings</h3>
+              <p>Check library opening hours</p>
+              <a class="text-link" href="#info">View Timings</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="books">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Recently Added Books</p>
+            <h2>Fresh arrivals from the stacks</h2>
+          </div>
+
+          <div class="dashboard-books-grid">
+            <article class="book-card reveal">
+              <div class="book-cover cover-blue">DS</div>
+              <div class="book-details">
+                <h3>Data Structures</h3>
+                <p>Author: Mark Allen</p>
+                <p>Category: Computer Engineering</p>
+              </div>
+              <span class="status-badge status-available">🟢 Available</span>
+            </article>
+
+            <article class="book-card reveal">
+              <div class="book-cover cover-purple">DB</div>
+              <div class="book-details">
+                <h3>Database Management System</h3>
+                <p>Author: Korth</p>
+                <p>Category: Computer Engineering</p>
+              </div>
+              <span class="status-badge status-issued">🔴 Issued</span>
+            </article>
+
+            <article class="book-card reveal">
+              <div class="book-cover cover-cyan">CN</div>
+              <div class="book-details">
+                <h3>Computer Networks</h3>
+                <p>Author: Andrew S. Tanenbaum</p>
+                <p>Category: Computer Engineering</p>
+              </div>
+              <span class="status-badge status-available">🟢 Available</span>
+            </article>
+
+            <article class="book-card reveal">
+              <div class="book-cover cover-indigo">EM</div>
+              <div class="book-details">
+                <h3>Engineering Mathematics</h3>
+                <p>Author: R.K. Jain</p>
+                <p>Category: Mathematics</p>
+              </div>
+              <span class="status-badge status-available">🟢 Available</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container activity-layout">
+          <div class="activity-panel reveal">
+            <div class="section-heading">
+              <p class="eyebrow">Recent Library Activity</p>
+              <h2>Latest updates and circulation activity</h2>
+            </div>
+            <div class="activity-timeline">
+              <article class="timeline-item">
+                <div class="timeline-badge timeline-badge-success">📖</div>
+                <div>
+                  <h3>Book Issued</h3>
+                  <p>Data Structures was issued to a student.</p>
+                  <time>Today, 10:30 AM</time>
+                </div>
+              </article>
+
+              <article class="timeline-item">
+                <div class="timeline-badge timeline-badge-warning">↩️</div>
+                <div>
+                  <h3>Book Returned</h3>
+                  <p>Database Management System was returned.</p>
+                  <time>Today, 09:15 AM</time>
+                </div>
+              </article>
+
+              <article class="timeline-item">
+                <div class="timeline-badge timeline-badge-info">✨</div>
+                <div>
+                  <h3>New Book Added</h3>
+                  <p>5 new Computer Engineering books were added.</p>
+                  <time>Yesterday</time>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <section class="info-card reveal" id="info">
+            <p class="eyebrow">Library information</p>
+            <h2>📍 L.D. College of Engineering Library</h2>
+            <div class="info-list">
+              <p>🕐 Monday – Friday: 8:00 AM – 8:00 PM</p>
+              <p>🕐 Saturday: 9:00 AM – 5:00 PM</p>
+              <p>🚫 Sunday: Closed</p>
+            </div>
+            <p class="info-tagline">
+              Quiet spaces • Digital resources • Reference books • Study facilities
+            </p>
+          </section>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="profile">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">My Profile</p>
+            <h2>Personal library access</h2>
+          </div>
+
+          <div class="profile-grid">
+            <article class="profile-card card reveal">
+              <div class="profile-header">
+                <div>
+                  <p class="profile-label">Student Profile</p>
+                  <h3>Rohit Patel</h3>
+                  <p>Computer Engineering, Semester 6</p>
+                </div>
+                <span class="profile-badge">Active</span>
+              </div>
+
+              <div class="profile-stats">
+                <div>
+                  <p class="profile-stat-value">3</p>
+                  <p>Books Borrowed</p>
+                </div>
+                <div>
+                  <p class="profile-stat-value">1</p>
+                  <p>Overdue</p>
+                </div>
+                <div>
+                  <p class="profile-stat-value">7</p>
+                  <p>Bookmarks</p>
+                </div>
+              </div>
+
+              <div class="profile-actions">
+                <a class="btn btn-primary" href="#books">Update Loans</a>
+                <a class="btn btn-secondary" href="#info">View Schedule</a>
+              </div>
+            </article>
+
+            <article class="card reveal">
+              <h3>Profile summary</h3>
+              <ul class="profile-list">
+                <li>Renew borrowed books quickly</li>
+                <li>See reserved titles and due dates</li>
+                <li>Track your borrowing history</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand brand-footer" href="../index.html">
+            <span class="brand-mark">LD</span>
+            <span class="brand-text">LDCE Library</span>
+          </a>
+          <p class="footer-copy">
+            A modern, professional library experience for students and faculty.
+          </p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="#profile">My Profile</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Information</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">FAQs</a></li>
+            <li><a href="../index.html">About</a></li>
+            <li><a href="../index.html">Services</a></li>
+            <li><a href="../index.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
