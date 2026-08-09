@@ -55,4 +55,135 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
+
+  const searchInput = document.querySelector("#book-search");
+  const searchResults = document.querySelector("#search-results");
+  const actionButtons = document.querySelectorAll("[data-action]");
+
+  const books = [
+    {
+      title: "Data Structures",
+      author: "M. Singh",
+      category: "Computer Science",
+      availability: "Available",
+      coverClass: "cover-blue",
+      label: "DS",
+    },
+    {
+      title: "Database Management System",
+      author: "R. Patel",
+      category: "Software Engineering",
+      availability: "Issued",
+      coverClass: "cover-purple",
+      label: "DB",
+    },
+    {
+      title: "Computer Networks",
+      author: "S. Desai",
+      category: "Networking",
+      availability: "Available",
+      coverClass: "cover-cyan",
+      label: "CN",
+    },
+    {
+      title: "Operating Systems",
+      author: "P. Kumar",
+      category: "Computer Science",
+      availability: "Available",
+      coverClass: "cover-indigo",
+      label: "OS",
+    },
+    {
+      title: "Engineering Mathematics",
+      author: "A. Joshi",
+      category: "Mathematics",
+      availability: "Available",
+      coverClass: "cover-blue",
+      label: "EM",
+    },
+    {
+      title: "Digital Electronics",
+      author: "K. Shah",
+      category: "Electronics",
+      availability: "Issued",
+      coverClass: "cover-purple",
+      label: "DE",
+    },
+  ];
+
+  const renderBooks = (items) => {
+    if (!searchResults) return;
+
+    if (items.length === 0) {
+      searchResults.innerHTML = '<div class="card"><p>No books matched your search. Please try a different title, author, or ISBN.</p></div>';
+      return;
+    }
+
+    searchResults.innerHTML = items
+      .map(
+        (book) => `
+        <article class="book-card">
+          <div class="book-cover ${book.coverClass}">${book.label}</div>
+          <div class="book-details">
+            <h3>${book.title}</h3>
+            <p>Author: ${book.author}</p>
+            <p>Category: ${book.category}</p>
+          </div>
+          <span class="status-badge ${book.availability === "Available" ? "status-available" : "status-issued"}">${book.availability}</span>
+        </article>
+      `
+      )
+      .join("");
+  };
+
+  const normalize = (value) => value.toLowerCase();
+
+  const updateSearchResults = (query) => {
+    const normalizedQuery = normalize(query.trim());
+
+    if (!normalizedQuery) {
+      renderBooks(books);
+      return;
+    }
+
+    const filtered = books.filter((book) => {
+      return (
+        normalize(book.title).includes(normalizedQuery) ||
+        normalize(book.author).includes(normalizedQuery) ||
+        normalize(book.category).includes(normalizedQuery)
+      );
+    });
+
+    renderBooks(filtered);
+  };
+
+  if (searchInput && searchResults) {
+    renderBooks(books);
+
+    searchInput.addEventListener("input", (event) => {
+      updateSearchResults(event.target.value);
+    });
+  }
+
+  const scrollToSection = (selector) => {
+    const section = document.querySelector(selector);
+    if (!section) return;
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  actionButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const action = button.dataset.action;
+      if (action === "search-books") {
+        scrollToSection("#search-books");
+        searchInput?.focus();
+      }
+      if (action === "view-timing") {
+        scrollToSection("#library-timing");
+      }
+      if (action === "browse-collection") {
+        scrollToSection("#recent-books");
+      }
+    });
+  });
 });

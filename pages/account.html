@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="LDCE Library student account" />
+
+    <title>My Account | LDCE Library</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link rel="stylesheet" href="../css/account.css" />
+
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+      <div class="container nav-container">
+
+        <a class="brand" href="../index.html" aria-label="LDCE Library home">
+
+          <span class="brand-mark">LD</span>
+
+          <span class="brand-text">LDCE Library</span>
+
+        </a>
+
+
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+
+          <span></span>
+
+          <span></span>
+
+          <span></span>
+
+        </button>
+
+
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+
+          <ul class="nav-list">
+
+            <li><a class="nav-link" href="../index.html">Home</a></li>
+
+            <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+
+            <li><a class="nav-link active" href="account.html">My Account</a></li>
+
+          </ul>
+
+        </nav>
+
+      </div>
+
+    </header>
+
+
+
+    <main class="account-page-main">
+
+      <section class="account-layout container">
+
+        <aside class="account-sidebar">
+
+          <div class="sidebar-brand">
+
+            <span class="brand-mark">LD</span>
+
+            <div>
+
+              <span class="eyebrow brand-eyebrow">L.D. College of Engineering</span>
+
+              <h3>Library Portal</h3>
+
+            </div>
+
+          </div>
+
+
+
+          <nav class="account-nav" aria-label="Account navigation">
+
+            <a href="#" class="account-nav-link is-active" data-account-nav="dashboard">
+
+              <span aria-hidden="true">Γûª</span>
+
+              <span>Student Dashboard</span>
+
+            </a>
+
+            <a href="#" class="account-nav-link" data-account-nav="borrowed">
+
+              <span aria-hidden="true">≡ƒôÜ</span>
+
+              <span>My Borrowed Books</span>
+
+            </a>
+
+            <a href="#" class="account-nav-link" data-account-nav="history">
+
+              <span aria-hidden="true">ΓÅ▒</span>
+
+              <span>Library History</span>
+
+            </a>
+
+            <a href="#" class="account-nav-link" data-account-nav="settings">
+
+              <span aria-hidden="true">ΓÜÖ</span>
+
+              <span>Account Settings</span>
+
+            </a>
+
+          </nav>
+
+
+
+          <div class="sidebar-help">
+
+            <p class="small-title">Library Support</p>
+
+            <p class="support-copy">Circulation desk: 10:00 AM - 5:00 PM</p>
+
+            <a class="text-link" href="#">Contact Desk</a>
+
+          </div>
+
+        </aside>
+
+
+
+        <section class="account-content-wrap">
+
+          <div class="account-topbar">
+
+            <div>
+
+              <p class="eyebrow">Student Access</p>
+
+              <h1 class="page-title">My Account</h1>
+
+              <p class="page-subtitle">Manage your library account and activities</p>
+
+            </div>
+
+            <div class="topbar-actions">
+
+              <a class="btn btn-secondary" href="../index.html">Home</a>
+
+              <button class="btn btn-primary" id="quickLogoutButton">Logout</button>
+
+            </div>
+
+          </div>
+
+
+
+          <div id="account-view" class="account-view"></div>
+
+        </section>
+
+      </section>
+
+    </main>
+
+
+
+    <footer class="site-footer">
+
+      <div class="container footer-grid">
+
+        <div>
+
+          <a class="brand brand-footer" href="../index.html">
+
+            <span class="brand-mark">LD</span>
+
+            <span class="brand-text">LDCE Library</span>
+
+          </a>
+
+          <p class="footer-copy">
+
+            A modern, professional library experience for students and faculty.
+
+          </p>
+
+        </div>
+
+
+
+        <div>
+
+          <h3>Quick Links</h3>
+
+          <ul class="footer-links">
+
+            <li><a href="../index.html">Home</a></li>
+
+            <li><a href="dashboard.html">Dashboard</a></li>
+
+            <li><a href="account.html">My Account</a></li>
+
+          </ul>
+
+        </div>
+
+
+
+        <div>
+
+          <h3>Information</h3>
+
+          <ul class="footer-links">
+
+            <li><a href="#">FAQs</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="services.html">Services</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+
+
+    <div class="toast-wrapper" id="toastWrapper"></div>
+
+
+
+    <script src="../js/script.js"></script>
+
+    <script src="../js/account.js"></script>
+
+  </body>
+
+</html>
+
